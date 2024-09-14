@@ -2,10 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Сайт мини-игр</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <div class="top center">
+        <section class="content">
+            <h1 class="content__title">Добро пожаловать на мой сайт мини-игр</h1>
+            <p class="content__text">Тебе предстоит пройти несколько увлекательных игр. 
+                Если готов, нажимай "Поехали" и приступай.</p>
+            <button class="content__btn">Поехали!</button>
+        </section>
+    </div>
+    <section class="games-box center">
+        <header class="games-box__header">
+            <h2 class="games-heading">Об играх</h2>
+            <p class="games-text">В моей коллекции представлено 6 игр на разные темы.<br> 
+                                   Игры несложные- в них может поиграть каждый. <br>
+                                   Все игры доступны для пользования.</p>
+        </header>  
+        <div class="games-content">
+            <div class="games-conteiner">
+            <a class="games" href="#">
+                <img class="games__img" src="img2/card1.png" alt="Угадай число">
+                <div class="games__file">
+                <p class="games__number">Игра№1</p>
+                <span class="games__name" >Угадай число</span>
+                </div>
+            </a>
+            <a class="games games_big"  href="#">
+                <img class="games__img" src="img2/card4.png" alt="Камень, ножницы, бумага">
+                <div class="games__file">
+                    <p class="games__number">Игра№4</p>
+                <span class="games__name games__name_big">Камень, ножницы,<br> 
+                    бумага</span>
+            </div>
+            </a>
+        </div>
+        <div class="games-conteiner">
+            <a class="games games_big"  href="#">
+                <img class="games__img" src="img2/card2.png" alt="Простая арифметика">
+                <div class="games__file">
+                    <p class="games__number">Игра№2</p>
+                <span class="games__name games__name_big">Простая арифметика</span>
+            </div>
+            </a>
+            <a class="games"  href="#">
+                <img class="games__img" src="img2/card5.png" alt="Простая викторина">
+                <div class="games__file">
+                    <p class="games__number">Игра№5</p>
+                <span class="games__name">Простая викторина</span>
+            </div>
+            </a>
+        </div>
+        <div class="games-conteiner">
+            <a class="games"  href="#">
+                <img class="games__img" src="img2/card3.png" alt="Переверни текст">
+                <div class="games__file">
+                    <p class="games__number">Игра№3</p>
+                <span class="games__name">Переверни текст</span>
+            </div>
+            </a>
+            
+            <a class="games games_big"  href="#">
+                <img class="games__img" src="img2/card6.png" alt="Генератор случайных цветов">
+                <div class="games__file">
+                    <p class="games__number">Игра№6</p>
+                <span class="games__name games__name_big">Генератор случайных цветов</span>
+            </div>
+            </a>
+        </div>
+            
+        </div>
+        
+    </section>
 </body>
 </html>
