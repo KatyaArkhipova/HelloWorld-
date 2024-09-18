@@ -109,7 +109,7 @@
 .games__file {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 26px;
   padding: 32px;
 }
 .games_big {

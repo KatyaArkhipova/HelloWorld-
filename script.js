@@ -34,7 +34,7 @@ let quotient = b / c;
 alert(`Частное: ${quotient}`);
 
 //Задание №5
-let result = Math.pow(2, 5);
+let result = 2 ** 5;
 alert(`Результат: ${result}`);
 
 //Задание №6
