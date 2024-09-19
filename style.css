@@ -162,6 +162,115 @@
   row-gap: 32px;
 }/*# sourceMappingURL=style.css.map */
 
+.mini-games{
+  height: 3500px;
+  font-family: Montserrat;
+  background: url(img2/stars\ top.svg)  top 94px right 44px no-repeat,
+              url(img2/stars\ bottom.svg) bottom 45px right 52px no-repeat ;
+  background-color: rgb(32, 32, 39);
+  
+}
+
+.mini-games__header{
+  width: 400px;
+  height: 78px;
+  padding-top: 46px;
+  padding-bottom: 72px;
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  text-align: left;
+}
+
+
+.mini-games__content{
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  
+}
+
+.mini-games-card{
+  display: flex;
+  border-radius: 30px;
+  box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
+  background: rgb(255, 255, 255);
+}
+
+.mini-games__img{
+  width: 600px;
+  height: 500px;
+}
+
+.mini-games__file{
+  width: 600px;
+  height: 500px;
+}
+
+.mini-games__file{
+  width: 504px;
+  height: 404px;
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+}
+
+.mini-games__name{
+  color: rgb(32, 32, 39);
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59px;
+  text-align: left;
+  padding-bottom: 24px;
+}
+
+.mini-games__text{
+  color: rgb(32, 32, 39);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  padding-bottom: 36px;
+}
+
+.mini-games__btn{
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  width: 247px;
+  height: 66px;
+  padding: 16px 28px 16px 28px;
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.mini-games__btn:hover{
+  background-color:rgb(255, 255, 255);
+  color:black;
+}
+
+.footer{
+  height: 144px;
+  background-color: rgb(225, 255, 143);
+}
+
+.footer__text{
+  color: rgb(0, 0, 0);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  text-align: center;
+  padding-top: 61px;
+}
+
 @media (max-width: 767px) {
 
   .center{
