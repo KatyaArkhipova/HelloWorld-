@@ -1,73 +1,122 @@
 
+//HW-3
+
 //Задание №1
-let a = 10;
-alert(a);
-a = 20;
-alert(a)
+
+let correctPassword = 'пароль';
+let enteredPassword = prompt('Введите пароль');
+if (enteredPassword === correctPassword) {
+    alert('Пароль введён верно');
+} else {
+    alert('Пароль введён неправильно');
+}
 
 //Задание №2
-const releaseYear = 2007;
-alert(`Год выпуска первого iPhone: ${releaseYear}`);
+
+let c = 2;
+if ((c > 0) && (c < 10)) {
+    console.log('Верно');
+} else {
+    console.log('Неверно');
+}
+
+//Проверка с разными значениями
+//c=0
+c = 0;
+if ((c > 0) && (c < 10)) {
+    console.log('Верно');
+} else {
+    console.log('Неверно');
+}
+
+//c=10
+ c = 10;
+if ((c > 0) && (c < 10)) {
+    console.log('Верно');
+} else {
+    console.log('Неверно');
+}
+//c=-3
+ c = -3;
+if ((c > 0) && (c < 10)) {
+    console.log('Верно');
+} else {
+    console.log('Неверно');
+}
+//c=2
+ c = 2;
+if ((c > 0) && (c < 10)) {
+    console.log('Верно');
+} else {
+    console.log('Неверно');
+}
 
 //Задание №3
-let creatorName = "Брендон Эйч";
-alert (`Имя создателя языка JS: ${creatorName}`);
+
+let a = 200;
+let b = 50;
+
+// Проверка условий
+if ((a > 100) || (b > 100)) {
+    console.log('Верно');
+} else {
+    console.log('Неверно');
+}
+
+a = 20;
+b = 50;
+if ((a > 100) || (b > 100)) {
+    console.log('Верно');
+} else {
+    console.log('Неверно');
+}
+//неверно
+
+a = 200;
+b = 50;
+if ((a > 100) || (b > 100)) {
+    console.log('Верно');
+} else {
+    console.log('Неверно');
+}
+//верно
 
 //Задание №4
-let b = 10;
-let c = 2;
 
-// Сумма
-let sum = b + c;
-alert(`Сумма: ${sum}`);
+let d = '2';
+let e = '3';
 
-// Разность
-let difference = b - c;
-alert(`Разность: ${difference}`);
-
-// Произведение
-let product = b * c;
-alert(`Произведение: ${product}`);
-
-// Частное
-let quotient = b / c;
-alert(`Частное: ${quotient}`);
+d = Number(d);
+e = Number(e);
+let result = d + e;
+alert(result); 
 
 //Задание №5
-let result = 2 ** 5;
-alert(`Результат: ${result}`);
 
-//Задание №6
-let num1 = 9;
-let num2 = 2;
+let monthNumber = 12;
 
-let remainder = num1 % num2;
-
-alert(`Остаток от деления ${num1} на ${num2}: ${remainder}`);
-
-//Задание №7
-let num = 1;
-num += 5; 
-num -= 3;
-num *= 7;  
-num /= 3;   
-num++;      
-num--;      
-alert(num);
-
-//Задание №8
-let age = prompt('Сколько Вам лет?');
-age = parseInt(age);
-alert(`Ваш возраст: ${age}`);
-
-//Задание №9
-let user = {
-    name: 'Василий Пупкин',
-    age: 35,
-    isAdmin: true
-};
-console.log(user);
-
-//Задание №10
-let userName = prompt('Как Вас зовут?');
-alert(`Привет, ${userName}!`);
+switch (monthNumber) {
+    case 1:
+    case 2:
+    case 3:
+        console.log('Зима');
+        break;
+    case 4:
+    case 5:
+    case 6:
+        console.log('Весна');
+        break;
+    case 7:
+    case 8:
+    case 9:
+        console.log('Лето');
+        break;
+    case 10:
+    case 11:
+    case 12:
+        console.log('Осень');
+        break;
+    default:
+        console.log('Неправильный номер месяца');
+        break;
+}
