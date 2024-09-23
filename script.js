@@ -1,122 +1,65 @@
 
-//HW-3
+//HW-4
 
 //Задание №1
 
-let correctPassword = 'пароль';
-let enteredPassword = prompt('Введите пароль');
-if (enteredPassword === correctPassword) {
-    alert('Пароль введён верно');
-} else {
-    alert('Пароль введён неправильно');
-}
+console.log('Привет');
+console.log('Привет');
 
 //Задание №2
 
-let c = 2;
-if ((c > 0) && (c < 10)) {
-    console.log('Верно');
-} else {
-    console.log('Неверно');
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
 }
 
-//Проверка с разными значениями
-//c=0
-c = 0;
-if ((c > 0) && (c < 10)) {
-    console.log('Верно');
-} else {
-    console.log('Неверно');
-}
-
-//c=10
- c = 10;
-if ((c > 0) && (c < 10)) {
-    console.log('Верно');
-} else {
-    console.log('Неверно');
-}
-//c=-3
- c = -3;
-if ((c > 0) && (c < 10)) {
-    console.log('Верно');
-} else {
-    console.log('Неверно');
-}
-//c=2
- c = 2;
-if ((c > 0) && (c < 10)) {
-    console.log('Верно');
-} else {
-    console.log('Неверно');
-}
 
 //Задание №3
 
-let a = 200;
-let b = 50;
-
-// Проверка условий
-if ((a > 100) || (b > 100)) {
-    console.log('Верно');
-} else {
-    console.log('Неверно');
+for (let i = 7; i <= 22; i++) {
+    console.log(i);
 }
-
-a = 20;
-b = 50;
-if ((a > 100) || (b > 100)) {
-    console.log('Верно');
-} else {
-    console.log('Неверно');
-}
-//неверно
-
-a = 200;
-b = 50;
-if ((a > 100) || (b > 100)) {
-    console.log('Верно');
-} else {
-    console.log('Неверно');
-}
-//верно
 
 //Задание №4
 
-let d = '2';
-let e = '3';
+const obj = {
+    "Коля": '200',
+    "Вася": '300',
+    "Петя": '400'
+  };
+  
+  for (const key in obj) {
+    const value = obj[key];
+    console.log(`${key} — зарплата ${value} долларов.`);
+  }
 
-d = Number(d);
-e = Number(e);
-let result = d + e;
-alert(result); 
+  //Задание №5
 
-//Задание №5
+  function main() {
+    let n = 1000;
+    let num = 0;
 
-let monthNumber = 12;
+    while (n >= 50) {
+        n /= 2;
+        num++;
+    }
 
-switch (monthNumber) {
-    case 1:
-    case 2:
-    case 3:
-        console.log('Зима');
-        break;
-    case 4:
-    case 5:
-    case 6:
-        console.log('Весна');
-        break;
-    case 7:
-    case 8:
-    case 9:
-        console.log('Лето');
-        break;
-    case 10:
-    case 11:
-    case 12:
-        console.log('Осень');
-        break;
-    default:
-        console.log('Неправильный номер месяца');
-        break;
-}
+    console.log(`Результат: ${n}`);
+    console.log(`Количество итераций: ${num}`);
+    }
+
+    main();
+
+  //Задание №6
+
+  const today = new Date();
+  const currentYear = today.getFullYear();
+  const currentMonth = today.getMonth();
+  const firstFridayNumber = today.getDay() % 7;
+  const totalDaysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+  
+  for (let day = 1; day <= totalDaysInMonth; day++) {
+      if ((day % 7 === firstFridayNumber) || (day === 1)) {
+          const date = new Date(currentYear, currentMonth, day);
+          console.log(`Сегодня пятница, ${date.getDate()} число. Необходимо подготовить отчет.`);
+      }
+  }
