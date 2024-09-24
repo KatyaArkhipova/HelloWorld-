@@ -3,8 +3,9 @@
 
 //Задание №1
 
-console.log('Привет');
-console.log('Привет');
+for (let i = 1; i <= 2; i++) {
+    console.log('Привет');
+}
 
 //Задание №2
 
@@ -57,7 +58,7 @@ const obj = {
   const firstFridayNumber = today.getDay() % 7;
   const totalDaysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
   
-  for (let day = 1; day <= totalDaysInMonth; day++) {
+  for (let day = firstFridayNumber; day <= totalDaysInMonth; day++) {
       if ((day % 7 === firstFridayNumber) || (day === 1)) {
           const date = new Date(currentYear, currentMonth, day);
           console.log(`Сегодня пятница, ${date.getDate()} число. Необходимо подготовить отчет.`);
