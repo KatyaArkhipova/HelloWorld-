@@ -1,66 +1,94 @@
-
-//HW-4
-
-//Задание №1
-
-for (let i = 1; i <= 2; i++) {
-    console.log('Привет');
-}
-
-//Задание №2
-
-for (let i = 1; i <= 5; i++) {
-    console.log(i);
-}
-
-
-//Задание №3
-
-for (let i = 7; i <= 22; i++) {
-    console.log(i);
-}
-
-//Задание №4
-
-const obj = {
-    "Коля": '200',
-    "Вася": '300',
-    "Петя": '400'
-  };
-  
-  for (const key in obj) {
-    const value = obj[key];
-    console.log(`${key} — зарплата ${value} долларов.`);
-  }
-
-  //Задание №5
-
-  function main() {
-    let n = 1000;
-    let num = 0;
-
-    while (n >= 50) {
-        n /= 2;
-        num++;
+//Задание 1
+function minimum(x, y) {
+    if (x < y) {
+        return x;
+    } else {
+        return y;
     }
+}
+console.log(minimum(8, 4));
+console.log(minimum(6, 6));
 
-    console.log(`Результат: ${n}`);
-    console.log(`Количество итераций: ${num}`);
+//Задание 2
+function isEvenOrOdd(num) {
+    if (num % 2 === 0) {
+        return 'Число четное';
+    } else {
+        return 'Число нечетное';
     }
+}
+console.log(isEvenOrOdd(4));
+console.log(isEvenOrOdd(5)); 
 
-    main();
+//Задание 3
+function squareAndLog(num) {
+    const squaredNum = num * num;
+    console.log(squaredNum);
+}
+squareAndLog(5); 
 
-  //Задание №6
+function squareNumber(num) {
+    return num * num;
+}
+const result = squareNumber(5);
+console.log(result);
 
-  const today = new Date();
-  const currentYear = today.getFullYear();
-  const currentMonth = today.getMonth();
-  const firstFridayNumber = today.getDay() % 7;
-  const totalDaysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
-  
-  for (let day = firstFridayNumber; day <= totalDaysInMonth; day++) {
-      if ((day % 7 === firstFridayNumber) || (day === 1)) {
-          const date = new Date(currentYear, currentMonth, day);
-          console.log(`Сегодня пятница, ${date.getDate()} число. Необходимо подготовить отчет.`);
-      }
-  }
+//Задание 4
+let age = Number(prompt('Сколько тебе лет?'));
+
+if (age < 0) {
+    alert('Вы ввели неправильное значение');
+} else if (age < 13) {
+    alert('Привет, друг!');
+} else {
+    alert('Добро пожаловать!');
+}
+
+//Задание 5
+function validateAndMultiply(a, b) {
+    if (isNaN(a) || isNaN(b)) {
+        return 'Одно или оба значения не являются числом';
+    } else {
+        return a * b;
+    }
+}
+console.log(validateAndMultiply(2, 3));
+console.log(validateAndMultiply('a', 3));
+console.log(validateAndMultiply(null, 3));
+
+//Задание 6
+function handleUserInput() {
+    let inputValue = Number(prompt('Введите число'));
+    
+    if (isNaN(inputValue)) {
+        return 'Переданный параметр не является числом';
+    } else {
+        let cubedValue = inputValue ** 3;
+        return `${inputValue} в кубе равняется ${cubedValue}`;
+    }
+}
+console.log(handleUserInput());
+
+//Задание 7
+
+function Circle(radius) {
+    this.radius = radius;
+}
+
+Circle.prototype.getArea = function() {
+    return Math.PI * this.radius * this.radius;
+};
+
+Circle.prototype.getPerimeter = function() {
+    return 2 * Math.PI * this.radius;
+};
+
+const circle1 = new Circle(5);
+const circle2 = new Circle(10);
+
+console.log(circle1.getArea()); 
+console.log(circle2.getArea()); 
+
+console.log(circle1.getPerimeter());
+console.log(circle2.getPerimeter());
+
