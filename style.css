@@ -6,10 +6,9 @@
 .top {
   position: relative;
   height: 800px;
-  background-color: rgb(225, 255, 143);
-  background-image: url(img2/Group\ stars.png);
-  background-repeat: no-repeat;
-  background-position: calc(100% + 500px) calc(0% - 400px);
+  background: url(img2/stars\ top-left.png)  63px 69px no-repeat,
+                url(img2/stars\ top-right.png) right -65% top 100% no-repeat ;
+    background-color:rgb(225, 255, 143);
   font-family: Montserrat;
 }
 
@@ -72,9 +71,10 @@
 .games-box {
   height: 1550px;
   font-family: Montserrat;
+  background: url(img2/starright-gamesbox.png) no-repeat top 10% right 7%,
+              url(img2/starsleft-gamesbox.png) no-repeat 13% 58%;
   background-color: rgb(32, 32, 39);
-  background-image: url(img2/Group\ stars2.png);
-  background-repeat: no-repeat;
+  
   
 }
 
