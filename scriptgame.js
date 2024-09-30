@@ -33,4 +33,29 @@ function startGame1() {
     }
 }
 
+//Игра "Простая арифметика".
+
+function generateProblem() {
+    const operations = ['+', '-', '*', '/'];
+    const num1 = Math.floor(Math.random() * 10) + 1; 
+    const num2 = Math.floor(Math.random() * 10) + 1; 
+    const operation = operations[Math.floor(Math.random() * operations.length)];
+    return {
+        problem: `${num1} ${operation} ${num2}`,
+        answer: eval(`${num1} ${operation} ${num2}`)
+    };
+}
+
+
+function startGame2() {
+    const { problem, answer } = generateProblem();
+    const userAnswer = parseFloat(prompt(`Решите задачу: ${problem}`));
+
+    
+    if (userAnswer === answer) {
+        alert('Верно! Молодец!');
+    } else {
+        alert(`Ошибка! Правильный ответ: ${answer}`);
+    }
+}
 
