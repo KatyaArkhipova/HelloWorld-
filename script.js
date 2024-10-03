@@ -1,141 +1,113 @@
 //Задание 1
-const array = [1, 5, 4, 10, 0, 3];
-
-for (const element of array) {
-    if (element === 10) {
-        console.log(element);
-        break;
-    }
-    console.log(element);
-}
+const string = 'js';
+const uppercaseString = string.toUpperCase();
+console.log(uppercaseString);
 
 //Задание 2
 
-const newarray = [1, 5, 4, 10, 0, 3];
-
-for (let i = 0; i < array.length; i++) {
-    if (newarray[i] === 4) {
-        console.log("Значение 4 находится на позиции " + i);
-        break;
-    }
+function filterByPrefix(arr, prefix) {
+    return arr.filter(str => str.toLowerCase().startsWith(prefix.toLowerCase()));
 }
+
+const strings = ['Hello', 'world', 'Goodbye', 'jump', 'start'];
+const prefix = 'st';
+const filteredStrings = filterByPrefix(strings, prefix);
+console.log(filteredStrings);
 
 //Задание 3
-const numbers = [1, 3, 5, 10, 20];
 
-const joinedNumbers = numbers.join(' ');
-
-console.log(joinedNumbers);
+const floorValue = Math.floor(32.58884);
+console.log(floorValue);
 
 
+const ceilValue = Math.ceil(32.58884);
+console.log(ceilValue); 
+
+
+const roundValue = Math.round(32.58884);
+console.log(roundValue);
 
 //Задание 4
-const rows = 3;
-const cols = 3;
-const matrix = [];
 
-for (let i = 0; i < rows; i++) {
-    const row = [];
-    for (let j = 0; j < cols; j++) {
-        row.push(1);
-    }
-    matrix.push(row);
-}
+const numbers = [52, 53, 49, 77, 21, 32];
 
-console.log(matrix);
+const minValue = Math.min(...numbers);
+console.log('Минимальное значение:', minValue);
+
+const maxValue = Math.max(...numbers);
+console.log('Максимальное значение:', maxValue);
 
 //Задание 5
 
-const array1 = [1, 1, 1];
-
-array1.push(2, 2, 2);
-
-console.log(array1);
+function getRandomNumber() {
+    const randomNumber = Math.floor(Math.random() * 10) + 1;
+    console.log(randomNumber);
+}
+getRandomNumber();
 
 //Задание 6
-const array2 = [9, 8, 7, 'a', 6, 5];
-array2.sort((a, b) => a - b);
-array3 = array2.filter(item => typeof item === 'number');
 
-console.log(array3);
+function createRandomArray(limit) {
+    const range = limit - 1; 
+    const arraySize = Math.floor(limit / 2); 
+    const randomArray = [];
+
+    for (let i = 0; i < arraySize; i++) {
+        randomArray.push(Math.floor(Math.random() * range));
+    }
+
+    return randomArray;
+}
+const limit = 10;
+const randomArray = createRandomArray(limit);
+console.log(randomArray); 
 
 //Задание 7
-const number = [9, 8, 7, 6, 5];
-
-let userGuess = prompt('Попробуйте угадать число');
-userGuess = parseInt(userGuess);
-
-if (number.includes(userGuess)) {
-    alert('Угадал');
-} else {
-    alert('Не угадал');
+function getRandomNumberInRange(min, max) {
+    const range = max - min + 1;
+    const randomNumber = Math.floor(Math.random() * range) + min;
+    return randomNumber;
 }
+
+const min = 1;
+const max = 10;
+const randomNumber = getRandomNumberInRange(min, max);
+console.log(randomNumber);
 
 //Задание 8
-const originalString = 'abcdef';
 
-const reversedString = originalString.split('').reverse().join('');
+const today = new Date();
 
-console.log(reversedString);
+console.log(`${today.getMonth() + 1}/${today.getDate()}/${today.getFullYear()}`);
 
 //Задание 9
-const multiDimensionalArray = [[1, 2, 3], [4, 5, 6]];
 
-const flattenedArray = [].concat(...multiDimensionalArray);
+const currentDate = new Date();
 
-console.log(flattenedArray);
+const futureDate = new Date(currentDate);
+futureDate.setDate(currentDate.getDate() + 73);
+
+console.log("Текущая дата: " + currentDate.toLocaleDateString());
+console.log("Дата через 73 дня: " + futureDate.toLocaleDateString());
 
 //Задание 10
-const number1 = [...Array(10).keys()].map(i => i + 1);
 
-for (let i = 0; i < number1.length - 1; i++) {
-    const currentNumber = numbers[i];
-    const nextNumber = number1[i + 1];
-    const sum = currentNumber + nextNumber;
-    console.log(`Сумма текущего и следующего элементов: ${sum}`);
+function formatDate(date) {
+    const dayNames = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+    const months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+
+    const dayName = dayNames[date.getDay()];
+    const day = date.getDate();
+    const month = months[date.getMonth()];
+    const year = date.getFullYear();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+
+    const formattedDate = `Дата: ${day} ${month} ${year} — это ${dayName}.\nВремя: ${hours}:${minutes}:${seconds}`;
+    return formattedDate;
 }
 
-//Задание 11
-function squares(arr) {
-    return arr.map(num => num * num);
-}
-
-const number2 = [1, 2, 3, 4, 5];
-const squaresOfNumbers = squares(number2);
-console.log(squaresOfNumbers);
-
-//Задание 12
-function wordLengths(words) {
-    return words.map(word => word.length);
-}
-const sentences = ["Привет", "Как дела?", "Отлично!", "Рад тебя видеть"];
-const lengths = wordLengths(sentences);
-console.log(lengths);
-
-//Задание 13
-function negativeValues(arr) {
-    return arr.filter(num => num < 0);
-}
-const number4 = [-1, 2, -3, 4, -5];
-const negativeNumbers = negativeValues(number4);
-console.log(negativeNumbers);
-
-//Задание 14
-const number5 = [];
-for (let i = 0; i < 10; i++) {
-    number5.push(Math.floor(Math.random() * 10));
-}
-
-const evenNumbers = number5.filter(num => num % 2 === 0);
-
-console.log("Исходный массив:", number5);
-console.log("Массив с чётными числами:", evenNumbers);
-
-//Задание 15
-const number6 = [];
-for (let i = 0; i < 6; i++) {
-    number6.push(Math.floor(Math.random() * 10) + 1);
-}
-const average = number6.reduce((accumulator, currentValue) => accumulator + currentValue) / number6.length;
-
-console.log(`Среднее арифметическое: ${average}`);
+const date = new Date();
+const formattedDate = formatDate(date);
+console.log(formattedDate);
