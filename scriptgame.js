@@ -101,11 +101,41 @@ for (let i = 0; i < quiz.length; i++) {
     const question = quiz[i];
     const userAnswer = prompt(question.question + "\n" + question.options.join("\n") + "\nВведите номер ответа (1, 2 или 3):");
     
-    if (userAnswer == question.correctAnswer) {
+    if (userAnswer === question.correctAnswer) {
         score++; 
     }
 }
 
 alert(`Вы набрали ${score} правильных ответов из ${quiz.length}`);
 
+}
+
+//Игра "Камень, ножницы,бумага".
+
+function startGame4() {
+
+    const choices = ['камень', 'ножницы', 'бумага'];
+
+    function getComputerChoice() {
+        return choices[Math.floor(Math.random() * choices.length)];
+    }
+
+    let userChoice = prompt('Выберите: камень, ножницы или бумага');
+    while (userChoice != 'камень' && userChoice != 'ножницы' && userChoice != 'бумага') {
+        userChoice = prompt('Неверный выбор. Пожалуйста, выберите снова: камень, ножницы или бумага');
+    }
+
+    const computerChoice = getComputerChoice();
+
+    if (userChoice === computerChoice) {
+        alert('Ничья!');
+    } else if ((userChoice === 'камень' && computerChoice === 'ножницы') ||
+               (userChoice === 'ножницы' && computerChoice === 'бумага') ||
+               (userChoice === 'бумага' && computerChoice === 'камень')) {
+        alert('Вы выиграли!');
+    } else {
+        alert('Вы проиграли...');
+    }
+
+    alert(`Вы выбрали: ${userChoice}\nКомпьютер выбрал: ${computerChoice}`);
 }
