@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задания по DOM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header">Lorem ipsum dolor sit.</h1>
+    <button id="toggleButton">Скрыть</button>
+    <button id="changeButton">Изменить текст</button>
+
+    <p id="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, non?</p>
+    <button id="colorButton">Изменить цвет</button>
+
+    <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, maiores?</p>
+    <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+
+    <p>Это первый абзац.</p>
+    <p class="description2">Это второй абзац.</p>
+    <p>Это третий абзац.</p>
+    <p class="description2">Это четвертый абзац.</p>
+
+    <button id="deleteElementButton">Удалить элемент</button>
+
+    <button id="addElementButton">Добавить элемент</button>
+
+
+    <script>
+        //задание №1
+        const header = document.querySelector('#header');
+        const toggleButton = document.querySelector('#toggleButton');
+
+        toggleButton.addEventListener('click', () => {
+            if (header.classList.contains('hidden')) {
+                header.classList.remove('hidden');
+            } else {
+                header.classList.add('hidden');
+            }
+        });
+
+        //задание №2
+
+        const paragraph = document.querySelector('#paragraph');
+        const colorButton = document.querySelector('#colorButton');
+
+        colorButton.addEventListener('click', () => {
+            paragraph.classList.add('blue');
+        });
+
+        //задание №3
+        const changeButton = document.querySelector('#changeButton');
+
+        changeButton.addEventListener('click', () => {
+            header.textContent = 'Привет, мир!';
+        });
+
+        //задание №4
+
+        const descriptions = document.querySelectorAll('.description');
+
+        descriptions.forEach(desc => {
+        desc.textContent = 'Измененный текст';
+        });
+
+        //задание №5
+
+        const descriptions2 = document.querySelectorAll('.description2');
+
+        descriptions2.forEach(desc => {
+        desc.textContent = 'Новый текст';
+        });
+
+        //задание №6
+
+        const addElementButton = document.getElementById('addElementButton');
+
+        addElementButton.addEventListener('click', () => {
+        const p = document.createElement('p');
+        p.textContent = 'Новый абзац';
+        document.body.appendChild(p);
+        });
+
+        //задание №7
+
+        const deleteElementButton = document.getElementById('deleteElementButton');
+
+        deleteElementButton.addEventListener('click', () => {
+        const firstDescription = document.querySelector('.description');
+        document.body.removeChild(firstDescription);
+        });
+    </script>
+</body>
+</html>
