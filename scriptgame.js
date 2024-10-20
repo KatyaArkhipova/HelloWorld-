@@ -139,3 +139,5 @@ function startGame4() {
 
     alert(`Вы выбрали: ${userChoice}\nКомпьютер выбрал: ${computerChoice}`);
 }
+
+

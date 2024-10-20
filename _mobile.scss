@@ -5,6 +5,44 @@
     padding-right: 16px;
 }
 
+.scrollable-block{
+  position: absolute;
+  width: 1717.4px;
+  height: 51.34px;
+  left: -6px;
+  top: 649px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 6;
+  padding: 16px 24px 16px 24px;
+  box-sizing: border-box;
+  border: 0.54px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(26.86px);
+  background: rgb(188, 236, 48);
+
+}
+.games-list{
+  display: none;
+}
+
+.games-list-mob{
+  display: flex;
+  overflow: hidden;
+  animation: slide 5000ms linear infinite;
+  color: rgb(32, 32, 39);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: 4%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+
+
 .games-box{
   display: none;
 }
