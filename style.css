@@ -6,8 +6,8 @@
 .top {
   position: relative;
   height: 800px;
-  background: url(img2/stars\ top-left.png)  63px 69px no-repeat,
-                url(img2/stars\ top-right.png) right -65% top 100% no-repeat ;
+  background: url(img2/stars-top-left.png)  63px 69px no-repeat,
+                url(img2/stars-top-right.png) right -65% top 100% no-repeat ;
     background-color:rgb(225, 255, 143);
   font-family: Montserrat;
 }
@@ -166,8 +166,8 @@
 .mini-games{
   padding-bottom: 144px;
   font-family: Montserrat;
-  background: url(img2/stars\ top.svg)  top 94px right 44px no-repeat,
-              url(img2/stars\ bottom.svg) bottom 45px right 52px no-repeat ;
+  background: url(img2/stars-top.svg)  top 94px right 44px no-repeat,
+              url(img2/stars-bottom.svg) bottom 45px right 52px no-repeat ;
   background-color: rgb(32, 32, 39);
   
 }
@@ -261,8 +261,7 @@
   padding-top: 61px;
 }
 .scrollable-block {
-  position: absolute;
-  width: 3220px;
+  width: 100%;
   height: 90px;
   display: flex;
   flex-direction: column;
@@ -281,6 +280,7 @@
 }
 
 .games-list {
+  width: 100%;
   display: flex;
   overflow: hidden;
   animation: slide 8000ms linear infinite;
@@ -307,8 +307,7 @@
 }
 
   .scrollable-block{
-    position: absolute;
-    width: 1717.4px;
+    width: 100%;
     height: 51.34px;
     left: -6px;
     top: 649px;
@@ -318,10 +317,6 @@
     align-items: flex-start;
     gap: 6;
     padding: 16px 24px 16px 24px;
-    box-sizing: border-box;
-    border: 0.54px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(26.86px);
-    background: rgb(188, 236, 48);
 
   }
   .games-list{
@@ -329,7 +324,13 @@
   }
 
   .games-list-mob{
+    width: 100%;
+    height: 19px;
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 27px;
     overflow: hidden;
     animation: slide 5000ms linear infinite;
     color: rgb(32, 32, 39);
@@ -341,6 +342,8 @@
     text-align: left;
     text-transform: uppercase;
   }
+
+  
 
 
 
@@ -363,8 +366,8 @@
 
   .top{
     height: 700px;
-    background: url(img2/stars\ left.png)  top -95px right -120px no-repeat,
-                url(img2/stars\ right.png)37px 64px no-repeat ;
+    background: url(img2/stars-left.png)  top -95px right -120px no-repeat,
+                url(img2/stars-right.png)37px 64px no-repeat ;
     background-color:rgb(225, 255, 143);
     
   }
@@ -476,9 +479,9 @@
 
 .top{
   height: 700px;
-  background: url(img2/stars\ top-left.png)  63px 69px no-repeat,
-  url(img2/stars\ top-right.png) right 950% top 100% no-repeat ;
-background-color:rgb(225, 255, 143); 
+  background: url(img2/stars-top-left.png)  63px 69px no-repeat,
+  url(img2/stars-top-right.png) right 950% top 100% no-repeat ;
+  background-color:rgb(225, 255, 143); 
 }
 .content{
   display: flex;
