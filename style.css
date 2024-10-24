@@ -39,7 +39,6 @@
 }
 .content__btn {
   width: 247px;
-  height: 66px;
   box-sizing: border-box;
   border: 1px solid rgb(32, 32, 39);
   border-radius: 60px;
@@ -48,6 +47,7 @@
   font-size: 24px;
   font-weight: 600;
   line-height: 141.69%;
+  padding: 16px 28px 16px 28px;
 
 }
 .content__btn:hover {
@@ -202,7 +202,6 @@
 }
 
 .mini-games__file{
-  height: 404px;
   display: flex;
   flex-direction: column;
   padding: 48px;
@@ -213,7 +212,6 @@
   font-family: Montserrat;
   font-size: 48px;
   font-weight: 700;
-  line-height: 59px;
   text-align: left;
   padding-bottom: 24px;
 }
@@ -223,7 +221,6 @@
   font-family: Montserrat;
   font-size: 24px;
   font-weight: 400;
-  line-height: 32px;
   text-align: left;
   padding-bottom: 36px;
 }
@@ -232,7 +229,6 @@
   border-radius: 60px;
   background: rgb(32, 32, 39);
   width: 247px;
-  height: 66px;
   padding: 16px 28px 16px 28px;
   color: rgb(255, 255, 255);
   font-family: Montserrat;
@@ -421,12 +417,12 @@
 
   .content__btn{
     width: 285px;
-    height: 55px;
     font-size: 16px;
     font-weight: 600;
     line-height: 141.69%;
     text-align: center;
     font-family: Montserrat;
+    padding: 16px 28px 16px 28px;
   }
 
   .mini-games{
@@ -456,7 +452,6 @@
   }
 
   .mini-games__file{
-    height: 260px;
     padding: 29px 29px 29px 32px;
   }
 
@@ -482,12 +477,10 @@
       font-weight: 400;
       line-height: 20px;
       max-width: 249px;
-      min-height: 40px;
       padding-bottom: 32px;
   }
 
   .mini-games__btn{
-    height: 55px;
     padding: 16px 28px 16px 28px;
     font-size: 16px;
     font-weight: 600;
@@ -544,12 +537,12 @@
 
 .content__btn{
   width: 285px;
-  height: 55px;
   font-size: 16px;
   font-weight: 600;
   line-height: 141.69%;
   text-align: center;
   font-family: Montserrat;
+  padding: 16px 28px 16px 28px;
 }
 .mini-games{
   background: none;
@@ -578,7 +571,6 @@
 }
 
 .mini-games__file{
-  height: 260px;
   padding: 29px 29px 29px 32px;
 }
 
@@ -595,7 +587,6 @@
 .mini-games__name{
   font-size: 32px;
   font-weight: 700;
-  line-height: 39px;
   padding-bottom: 16px;
 }
 
@@ -604,12 +595,10 @@
     font-weight: 400;
     line-height: 20px;
     max-width: 249px;
-    min-height: 40px;
     padding-bottom: 32px;
 }
 
 .mini-games__btn{
-  height: 55px;
   padding: 16px 28px 16px 28px;
   font-size: 16px;
   font-weight: 600;
